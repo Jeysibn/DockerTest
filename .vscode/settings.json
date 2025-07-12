@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [80, 120],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\r\n",
+  
+  "docker.showStartPage": false,
+  "docker.images.sortBy": "Label",
+  
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "terraform.languageServer": {
+    "enabled": true,
+    "args": []
+  },
+
+  // Windows-specific settings
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell"
+}

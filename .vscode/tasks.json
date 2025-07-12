@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Development Environment",
+            "type": "shell",
+            "command": "docker-compose -f docker\\docker-compose.yml up -d",
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Stop Development Environment",
+            "type": "shell",
+            "command": "docker-compose -f docker\\docker-compose.yml down",
+            "group": "none"
+        },
+        {
+            "label": "Terraform: Init",
+            "type": "shell",
+            "command": "cd terraform && terraform init",
+            "group": "none"
+        },
+        {
+            "label": "Terraform: Plan (Development)",
+            "type": "shell",
+            "command": "cd terraform && terraform plan -var-file=environments\\dev\\terraform.tfvars",
+            "group": "none"
+        },
+        {
+            "label": "GitHub: Create Pull Request",
+            "type": "shell",
+            "command": "gh pr create --web",
+            "group": "none"
+        }
+    ]
+}
