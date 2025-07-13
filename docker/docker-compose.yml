@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   web:
-    build:
+    build: 
       context: ..
       dockerfile: docker/Dockerfile
     ports:
@@ -10,7 +10,7 @@ services:
       - ../app:/app
     environment:
       - NODE_ENV=development
-
+    
   db:
     image: postgres:14
     environment:
