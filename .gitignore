@@ -1,3 +1,19 @@
+# Ignore environment files with credentials
 .env
 *.env
 config.env
+
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraformrc
+terraform.rc
+
+# Docker
+.dockerignore
+
+# IDE files
+.vscode/
+.idea/
